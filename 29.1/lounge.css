@@ -1,0 +1,10 @@
+.tubiao {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 让子元素水平居中 */
+  justify-content: flex-start; /* 让子元素垂直方向从顶部开始排列 */
+}
+
+.tubiao .logos {
+  margin-bottom: 10px; 
+}
