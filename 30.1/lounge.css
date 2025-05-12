@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.left-nav {
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+
+.right-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.car{
+  width: 100%;
+  filter: blur(3px)
+}
+
+.logo{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tip {
+  font-size: 12px;
+  font-family: Bentley,arial,helvetica,sans-serif;
+  background-color: rgba(4, 4, 4, 0.6);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+  /*margin: 0;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+}
+
+.text a{
+  color: black;
+}
+
+/*.move {
+  position: relative;
+  left: 50px;
+}
