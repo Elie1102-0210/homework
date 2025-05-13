@@ -1,0 +1,74 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.allcontent {
+	width:               800px;
+	padding-top:           5px;
+	padding-bottom:        5px;
+	margin-left:          auto;
+	margin-right:         auto;
+}
+
+.left-nav {
+  font-size: 13px;
+  position: absolute;
+  top: 0; 
+  left: 0;
+
+}
+
+.right-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.car{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.car img{
+  width: 120%;
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+.logo{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tip {
+  font-size: 12px;
+  font-family: Bentley,arial,helvetica,sans-serif;
+  background-color: rgba(4, 4, 4, 0.6);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+  /*margin: 0;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+}
+
+.text a{
+  color: black;
+}
+
+/*.move {
+  position: relative;
+  left: 50px;
+}*/
