@@ -1,0 +1,214 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Bentley, arial, helvetica, sans-serif;
+}
+
+.allcontent {
+  width: 100%; 
+  
+}
+
+.content{
+  display: flex;
+  flex-direction: row; /* 关键修改：水平排列子元素 */
+  justify-content: flex-start; /* 子元素水平左对齐（可替换为 center/space-between 等） */
+  align-items: flex-end; /* 可选：子元素垂直底部对齐 */
+  position: relative; 
+  margin-left: 49px;
+  margin-right: 50px;
+  margin-top: 65px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),url(image/car.jpg);
+  background-repeat: no-repeat; 
+  background-size: 100% auto; 
+  min-height: 46.2vw;
+}
+
+.text1 {
+  width: 350px;
+  /* 相对定位（默认已为 relative，无需额外声明） */
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 30px;
+}
+.text1 a{
+  color: white;
+  font-size: 40px;
+}
+
+.text2 {
+  width: 300px;
+  padding-left: 60px;
+  padding-bottom: 30px;
+}
+
+.text2 a{
+  color: white;
+  font-size: 15px;
+}
+.content-left-arrow {
+  padding: 8px 20px 8px 20px;
+  position: absolute; /* 关键修改：改为绝对定位 */
+  top: 60px; /* 垂直定位（根据需求调整） */
+  right: 130px; /* 水平定位（避免与右侧箭头重叠） */
+  color: white; 
+  font-size: 18px; 
+  text-decoration: none; 
+  z-index: 3; 
+}
+
+.content-right-arrow {
+  padding: 8px 20px 8px 20px;
+  position: absolute; /* 关键修改：改为绝对定位 */
+  top: 60px; /* 与左侧箭头垂直对齐 */
+  right: 60px; /* 水平定位（右侧距离容器 20px） */
+  color: white; 
+  font-size: 18px; 
+  text-decoration: none; 
+  z-index: 3; 
+}
+
+
+.content-left-arrow:hover,
+.content-right-arrow:hover {
+  background-color: rgba(224, 224, 224, 0.3); /
+}
+
+.article {
+  margin-bottom: 20px; /* 保留底部边距 */
+}
+
+.article::after {
+  content: "";
+  display: block;
+  clear: both; /* 关键：清除左右浮动 */
+}
+
+.logo {
+  position: absolute; /* 绝对定位，脱离文档流 */
+  top: 47px; /* 垂直位置（根据需求调整） */
+  left: 49.5%; /* 水平居中 */
+  transform: translateX(-50%); /* 修正自身宽度偏移 */
+  z-index: 2;
+}
+
+
+.left-nav{
+  float: left;
+  margin-left: 49px;
+  margin-top: 60px;
+}
+
+.left-nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 45px;
+  z-index: 10;
+}
+.left-nav a:hover {
+  color: gray;
+}
+
+.right-nav {
+  float: right;
+  margin-right: 50px;
+  margin-top:50px;
+}
+
+.right-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px; 
+  z-index: 10;
+}
+
+.right-nav a:hover {
+  background-color: gray;
+}
+.l1{
+  border: 1px solid rgb(255, 255, 255); 
+}
+
+.Button {
+  margin-left: auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  padding-right:50px;
+  padding-bottom: 50px;
+  
+}
+.Button1,.Button2{
+  padding: 15px 20px 15px 20px;
+  
+}
+
+.Button1 {
+  align-self: flex-end;
+  background-color: rgb(57, 77, 69);
+}
+
+.Button2{
+  border: 1px solid rgb(255, 255, 255); 
+}
+
+.Button a {
+  color: white;
+  text-decoration: none;
+  /* 移除原水平边距，使用 flex gap 控制间距 */
+}
+
+
+.car{
+  /* 改为绝对定位，脱离文档流 */
+  position: absolute; 
+  /* 定位到页面顶部居中（根据需求调整数值） */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 保留原有布局属性 */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* 控制层级，避免被其他元素遮挡 */
+  width: 100%;
+} 
+.car img{
+  width: 120%;
+  filter: blur(18px) brightness(55%);
+  transform: scale(1.05);
+}
+
+
+/* 确保子元素（导航、文字等）显示在背景上方 */
+.part1 > * {
+  position: relative; 
+  z-index: 2; 
+}
+
+
+
+.tip {
+  z-index: 10; 
+  font-size: 17px;
+  font-family: normal,arial,helvetica,sans-serif;
+  background-color: rgba(4, 4, 4, 0.6);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
+}
+.tip p{
+  color: white;
+  margin: 0px;
+}
+
+.Button2 {
+  text-align: center; /* 关键修改：使内部内容水平居中 */
+}
+
